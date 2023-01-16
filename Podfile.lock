@@ -1,0 +1,20 @@
+PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - AlignedCollectionViewFlowLayout
+    - SnapKit
+
+SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 2b26e88d780cd2c737be96ef30a71b9893203a4b
+
+COCOAPODS: 1.11.3
