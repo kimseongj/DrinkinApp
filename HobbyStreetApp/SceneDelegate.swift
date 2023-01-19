@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
         let tabbarController = TabbarController() // 맨 처음 보여줄 ViewController
         let viewController = ViewController()
+        let loginController = LoginViewController()
         
-        window?.rootViewController = viewController//tabbarController
+        window?.rootViewController = loginController//tabbarController
         window?.makeKeyAndVisible()
   
     }

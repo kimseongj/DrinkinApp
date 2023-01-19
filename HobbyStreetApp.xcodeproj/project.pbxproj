@@ -18,7 +18,7 @@
 		1C8CCFC629630CAF00AF59C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC529630CAF00AF59C4 /* Assets.xcassets */; };
 		1C8CCFC929630CAF00AF59C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC729630CAF00AF59C4 /* LaunchScreen.storyboard */; };
 		1C8CCFD329630E2C00AF59C4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD229630E2C00AF59C4 /* LoadingView.swift */; };
-		1C8CCFD629630E5A00AF59C4 /* HomeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD529630E5A00AF59C4 /* HomeScrollView.swift */; };
+		1C8CCFD629630E5A00AF59C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD529630E5A00AF59C4 /* HomeView.swift */; };
 		1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFDD29630EBE00AF59C4 /* CocktailInformationView.swift */; };
 		1C8CCFE029630EE300AF59C4 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFDF29630EE300AF59C4 /* BaseCollectionViewCell.swift */; };
 		1C8CCFE229630EF300AF59C4 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFE129630EF300AF59C4 /* BaseCollectionView.swift */; };
@@ -53,7 +53,7 @@
 		1C8CCFC829630CAF00AF59C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C8CCFCA29630CAF00AF59C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C8CCFD229630E2C00AF59C4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		1C8CCFD529630E5A00AF59C4 /* HomeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollView.swift; sourceTree = "<group>"; };
+		1C8CCFD529630E5A00AF59C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C8CCFDD29630EBE00AF59C4 /* CocktailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailInformationView.swift; sourceTree = "<group>"; };
 		1C8CCFDF29630EE300AF59C4 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C8CCFE129630EF300AF59C4 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			children = (
 				1C590A1029702A1A007DD650 /* MakingDirectly */,
 				1C590A0F29702A15007DD650 /* CollectionOfTip */,
-				1C8CCFD529630E5A00AF59C4 /* HomeScrollView.swift */,
+				1C8CCFD529630E5A00AF59C4 /* HomeView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -426,7 +426,7 @@
 				1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */,
 				1C8CCFE429630F0900AF59C4 /* BaseView.swift in Sources */,
 				1C8CCFEA29630F4F00AF59C4 /* IngredientCollectionViewCell.swift in Sources */,
-				1C8CCFD629630E5A00AF59C4 /* HomeScrollView.swift in Sources */,
+				1C8CCFD629630E5A00AF59C4 /* HomeView.swift in Sources */,
 				1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */,
 				1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */,
 			);

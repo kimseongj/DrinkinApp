@@ -1,6 +1,6 @@
 import UIKit
 //MARK: 이 화면이 일단은 스크롤뷰로 구성되어야겠구만
-class HomeScrollView: UIScrollView {
+class HomeView: UIView {
     
     let mainTitle: UILabel = {
         let mainTitle = UILabel()
@@ -27,50 +27,18 @@ class HomeScrollView: UIScrollView {
         return subRecommendCocktail
     }()
     
-    let recommendButton: UIButton = {
-        let recommendButton = UIButton()
-        recommendButton.backgroundColor = .black
-        recommendButton.setTitle("추천받기", for: .normal)
-        recommendButton.setTitleColor(.white, for: .normal)
-        recommendButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        recommendButton.layer.cornerRadius = 20
-        recommendButton.layer.borderColor = UIColor(red: 0.467, green: 0.467, blue: 0.459, alpha: 1).cgColor
-        recommendButton.layer.borderWidth = 3
-        return recommendButton
+    let startButton: UIButton = {
+        let startButton = UIButton()
+        startButton.backgroundColor = .black
+        startButton.setTitle("시작하기", for: .normal)
+        startButton.setTitleColor(.white, for: .normal)
+        startButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        startButton.layer.cornerRadius = 20
+        startButton.layer.borderColor = UIColor(red: 0.467, green: 0.467, blue: 0.459, alpha: 1).cgColor
+        startButton.layer.borderWidth = 3
+        return startButton
     }()
-    
-    let subMakingDirectly: UILabel = {
-        let smd = UILabel()
-        smd.textColor = .black
-        smd.font = UIFont.systemFont(ofSize: 14)
-        smd.text = "그 칵테일, 어떤 맛일까?"
-        return smd
-    }()
-    
-    let makingDirectly: UILabel = {
-        let md = UILabel()
-        md.textColor = .black
-        md.font = UIFont.boldSystemFont(ofSize: 20)
-        md.text = "직접 만들어 보았다"
-        return md
-    }()
-    
-    let subCollectionOfTip: UILabel = {
-        let scot = UILabel()
-        scot.textColor = .black
-        scot.font = UIFont.systemFont(ofSize: 14)
-        scot.text = "내실력을 한 단계 높여 줄"
-        return scot
-    }()
-    
-    let collectionOfTip: UILabel = {
-        let cot = UILabel()
-        cot.textColor = .black
-        cot.font = UIFont.boldSystemFont(ofSize: 20)
-        cot.text = "꿀팀 모음집"
-        return cot
-    }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -80,11 +48,6 @@ class HomeScrollView: UIScrollView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setHomeScrollView() {
-        self.backgroundColor = .black
-        self.showsVerticalScrollIndicator = false // 스크롤바 표시할지 안할지 정하기
-    }
 
     func configureUI() {
        let safeArea = safeAreaLayoutGuide
@@ -92,9 +55,6 @@ class HomeScrollView: UIScrollView {
         self.addSubview(mainTitle)
         self.addSubview(recommendCocktail)
         self.addSubview(subRecommendCocktail)
-        self.addSubview(recommendButton)
-        self.addSubview(subMakingDirectly)
-        self.addSubview(makingDirectly)
 //        self.addSubview(subCollectionOfTip)
 //        self.addSubview(collectionOfTip)
         
@@ -118,27 +78,18 @@ class HomeScrollView: UIScrollView {
             make.height.equalTo(23)
         }
         
-        recommendButton.snp.makeConstraints { make in
+        startButton.snp.makeConstraints { make in
             make.top.equalTo(subRecommendCocktail.snp.bottom).offset(8)
             make.height.equalTo(39)
             make.width.equalTo(105)
             make.centerX.equalToSuperview()
         }
-        
-        subMakingDirectly.snp.makeConstraints { make in
-            make.top.equalTo(recommendButton.snp.bottom).offset(40)
-            make.leading.equalToSuperview().offset(16)
-            make.height.equalTo(17)
-            make.width.equalTo(140)
-        }
-        
-        makingDirectly.snp.makeConstraints { make in
-            make.top.equalTo(subMakingDirectly.snp.bottom).offset(4)
-            make.leading.equalToSuperview().offset(16)
-        }
-        
-        
     }
+    
+//    func tapStartButton() {
+//        let vc = ViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
 

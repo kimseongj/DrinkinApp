@@ -7,6 +7,27 @@
 
 import UIKit
 
+class LoginViewController: UIViewController {
+    
+    let loginView = LoginView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "회원가입"
+        view.backgroundColor = .green
+        configureUI()
+        
+    }
+    
+    func configureUI() {
+        view.addSubview(loginView)
+        
+        loginView.snp.makeConstraints { make in
+            make.leading.trailing.top.bottom.equalToSuperview()
+        }
+    }
+}
+
 class LoginView: UIView {
     
     let idLabel: UILabel = {
@@ -20,7 +41,8 @@ class LoginView: UIView {
     let idTextField: UITextField = {
         let idTextField = UITextField()
         idTextField.placeholder = "아이디"
-        idTextField.layer.cornerRadius = 3
+        idTextField.layer.cornerRadius = 10
+        idTextField.layer.borderWidth = 1.5
         return idTextField
     }()
     
@@ -35,7 +57,10 @@ class LoginView: UIView {
     let passwordTextField: UITextField = {
         let passwordTextField = UITextField()
         passwordTextField.placeholder = "8자 이상"
-        passwordTextField.layer.cornerRadius = 3
+        passwordTextField.layer.cornerRadius = 10
+        passwordTextField.layer.borderColor = UIColor.black.cgColor
+        passwordTextField.layer.borderWidth = 1.5
+//        passwordTextField.
         return passwordTextField
     }()
     
@@ -50,7 +75,9 @@ class LoginView: UIView {
     let nicknameTextField: UITextField = {
         let nicknameTextField = UITextField()
         nicknameTextField.placeholder = "파란우산"
-        nicknameTextField.layer.cornerRadius = 3
+        nicknameTextField.layer.cornerRadius = 10
+        nicknameTextField.layer.borderColor = UIColor.black.cgColor
+        nicknameTextField.layer.borderWidth = 1.5
         return nicknameTextField
     }()
     
@@ -84,9 +111,45 @@ class LoginView: UIView {
         self.addSubview(passwordTextField)
         self.addSubview(nicknameLabel)
         self.addSubview(nicknameTextField)
-        self.addSubview(agreeingClauseLabel)
-        self.addSubview(watchingClauseButton)
+//        self.addSubview(agreeingClauseLabel)
+//        self.addSubview(watchingClauseButton)
 
+        idLabel.snp.makeConstraints {make in
+            make.top.equalToSuperview().offset(40)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(17)
+        }
+        idTextField.snp.makeConstraints { make in
+            make.top.equalTo(idLabel.snp.bottom).offset(16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(42)
+        }
+        passwordLabel.snp.makeConstraints { make in
+            make.top.equalTo(idTextField.snp.bottom).offset(26)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(17)
+        }
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(passwordLabel.snp.bottom).offset(16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(42)
+        }
+        nicknameLabel.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(26)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(17)
+        }
+        nicknameTextField.snp.makeConstraints { make in
+            make.top.equalTo(nicknameLabel.snp.bottom).offset(16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(42)
+        }
     }
 }
 

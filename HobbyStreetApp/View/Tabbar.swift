@@ -16,21 +16,21 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     class MainVC: UIViewController {
-        let homeScrollView = HomeScrollView()
+//        let homeScrollView = HomeScrollView()
 
         override func viewDidLoad() {
             super.viewDidLoad()
             view.backgroundColor = .white
-            configureHomeScrollView()
+//            configureHomeScrollView()
         }
         
-        func configureHomeScrollView() {
-            view.addSubview(homeScrollView)
-            homeScrollView.snp.makeConstraints { make in
-                make.top.leading.trailing.bottom.equalToSuperview()
-                
-            }
-        }
+//        func configureHomeScrollView() {
+//            view.addSubview(homeScrollView)
+//            homeScrollView.snp.makeConstraints { make in
+//                make.top.leading.trailing.bottom.equalToSuperview()
+//
+//            }
+//        }
         
     }
     
@@ -49,7 +49,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
         
     func setTabBar() {
-        let mainTab = MainVC()
+        let mainTab = UINavigationController(rootViewController: MainVC())
         let mainTabBarItem = UITabBarItem(title: "메인", image: nil, tag: 0)
         mainTab.tabBarItem = mainTabBarItem
     
