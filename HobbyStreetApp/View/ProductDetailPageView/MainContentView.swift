@@ -127,7 +127,6 @@ class MainContentView: UIView {
             make.centerY.equalTo(profileImage)
             make.leading.equalTo(profileImage.snp.trailing).offset(8)
             make.height.equalTo(14)
-            //MARK: 설계 상 81로 나와 있지만 짤리기 때문에 100으로 설정
             make.width.equalTo(100)
         }
         

@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C021C8A298E45FF00BA0B19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C89298E45FF00BA0B19 /* Coordinator.swift */; };
+		1C021C8C298E463500BA0B19 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8B298E463500BA0B19 /* AppCoordinator.swift */; };
+		1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */; };
+		1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */; };
+		1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */; };
+		1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */; };
 		1C590A1229702C3C007DD650 /* CollectionOfTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C590A1129702C3C007DD650 /* CollectionOfTipView.swift */; };
 		1C590A1629702CA1007DD650 /* CollectionOfTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C590A1529702CA1007DD650 /* CollectionOfTipCell.swift */; };
-		1C6609B3296AB6FF0026CF9E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609B2296AB6FF0026CF9E /* Coordinator.swift */; };
-		1C6609B5296AB8420026CF9E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609B4296AB8420026CF9E /* MainCoordinator.swift */; };
-		1C6609BC296AD6260026CF9E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609BB296AD6260026CF9E /* Main.swift */; };
+		1C5B1C9A299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B1C99299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift */; };
+		1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609BB296AD6260026CF9E /* PreferCocktail.swift */; };
 		1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */; };
 		1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */; };
 		1C8CCFC129630CAD00AF59C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC029630CAD00AF59C4 /* ViewController.swift */; };
 		1C8CCFC629630CAF00AF59C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC529630CAF00AF59C4 /* Assets.xcassets */; };
 		1C8CCFC929630CAF00AF59C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC729630CAF00AF59C4 /* LaunchScreen.storyboard */; };
 		1C8CCFD329630E2C00AF59C4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD229630E2C00AF59C4 /* LoadingView.swift */; };
-		1C8CCFD629630E5A00AF59C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD529630E5A00AF59C4 /* HomeView.swift */; };
+		1C8CCFD629630E5A00AF59C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFD529630E5A00AF59C4 /* MainViewController.swift */; };
 		1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFDD29630EBE00AF59C4 /* CocktailInformationView.swift */; };
 		1C8CCFE029630EE300AF59C4 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFDF29630EE300AF59C4 /* BaseCollectionViewCell.swift */; };
 		1C8CCFE229630EF300AF59C4 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFE129630EF300AF59C4 /* BaseCollectionView.swift */; };
@@ -32,19 +37,26 @@
 		1C8CCFF229630FC300AF59C4 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF129630FC300AF59C4 /* SkillView.swift */; };
 		1C8CCFF429630FD500AF59C4 /* SkillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */; };
 		1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */; };
-		1C8CCFFA2963FC5D00AF59C4 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF92963FC5D00AF59C4 /* Tabbar.swift */; };
+		1C8CCFFA2963FC5D00AF59C4 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */; };
 		1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFC2964043000AF59C4 /* MainContentView.swift */; };
 		1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */; };
 		1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC34BFE29752665003BC3B7 /* LoginView.swift */; };
+		1CD9C3BE299264C4007F277B /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C3BD299264C4007F277B /* CocktailViewController.swift */; };
+		1CD9C3C0299264EF007F277B /* HomeBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9C3BF299264EF007F277B /* HomeBarViewController.swift */; };
 		B991BB0C5DF6D10268D4CCD0 /* Pods_HobbyStreetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C07F71DB971F70D842E42B /* Pods_HobbyStreetApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C021C89298E45FF00BA0B19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1C021C8B298E463500BA0B19 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCCoordinator.swift; sourceTree = "<group>"; };
+		1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailVCCoordinator.swift; sourceTree = "<group>"; };
+		1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarVCCoordinator.swift; sourceTree = "<group>"; };
+		1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionView.swift; sourceTree = "<group>"; };
 		1C590A1129702C3C007DD650 /* CollectionOfTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionOfTipView.swift; sourceTree = "<group>"; };
 		1C590A1529702CA1007DD650 /* CollectionOfTipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionOfTipCell.swift; sourceTree = "<group>"; };
-		1C6609B2296AB6FF0026CF9E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		1C6609B4296AB8420026CF9E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		1C6609BB296AD6260026CF9E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		1C5B1C99299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionViewCoordinator.swift; sourceTree = "<group>"; };
+		1C6609BB296AD6260026CF9E /* PreferCocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktail.swift; sourceTree = "<group>"; };
 		1C8CCFB929630CAD00AF59C4 /* HobbyStreetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyStreetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +65,7 @@
 		1C8CCFC829630CAF00AF59C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C8CCFCA29630CAF00AF59C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C8CCFD229630E2C00AF59C4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		1C8CCFD529630E5A00AF59C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1C8CCFD529630E5A00AF59C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1C8CCFDD29630EBE00AF59C4 /* CocktailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailInformationView.swift; sourceTree = "<group>"; };
 		1C8CCFDF29630EE300AF59C4 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C8CCFE129630EF300AF59C4 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
@@ -67,10 +79,12 @@
 		1C8CCFF129630FC300AF59C4 /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
 		1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionView.swift; sourceTree = "<group>"; };
 		1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
-		1C8CCFF92963FC5D00AF59C4 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		1C8CCFFC2964043000AF59C4 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeView.swift; sourceTree = "<group>"; };
 		1CC34BFE29752665003BC3B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1CD9C3BD299264C4007F277B /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
+		1CD9C3BF299264EF007F277B /* HomeBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarViewController.swift; sourceTree = "<group>"; };
 		2C2A8A71A6074253A0ADDBB3 /* Pods-HobbyStreetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HobbyStreetApp.debug.xcconfig"; path = "Target Support Files/Pods-HobbyStreetApp/Pods-HobbyStreetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		34C07F71DB971F70D842E42B /* Pods_HobbyStreetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HobbyStreetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6EB3353002394FE58940FA /* Pods-HobbyStreetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HobbyStreetApp.release.xcconfig"; path = "Target Support Files/Pods-HobbyStreetApp/Pods-HobbyStreetApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +102,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C021C88298E377000BA0B19 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1C021C89298E45FF00BA0B19 /* Coordinator.swift */,
+				1C021C8B298E463500BA0B19 /* AppCoordinator.swift */,
+				1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */,
+				1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */,
+				1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */,
+				1C5B1C99299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		1C347DCE2984F17C0054DFE7 /* PreferCocktailSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */,
+			);
+			path = PreferCocktailSelectionView;
+			sourceTree = "<group>";
+		};
 		1C590A0F29702A15007DD650 /* CollectionOfTip */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,22 +130,6 @@
 				1C590A1529702CA1007DD650 /* CollectionOfTipCell.swift */,
 			);
 			path = CollectionOfTip;
-			sourceTree = "<group>";
-		};
-		1C590A1029702A1A007DD650 /* MakingDirectly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MakingDirectly;
-			sourceTree = "<group>";
-		};
-		1C6609B1296A68BE0026CF9E /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				1C6609B2296AB6FF0026CF9E /* Coordinator.swift */,
-				1C6609B4296AB8420026CF9E /* MainCoordinator.swift */,
-			);
-			path = Flow;
 			sourceTree = "<group>";
 		};
 		1C6609B6296AD5450026CF9E /* Domain */ = {
@@ -125,7 +144,7 @@
 		1C6609B7296AD5880026CF9E /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1C6609BB296AD6260026CF9E /* Main.swift */,
+				1C6609BB296AD6260026CF9E /* PreferCocktail.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -173,10 +192,12 @@
 		1C8CCFD029630E1900AF59C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CD9C3BB29926156007F277B /* TabBarCore */,
+				1C021C88298E377000BA0B19 /* Flow */,
+				1C347DCE2984F17C0054DFE7 /* PreferCocktailSelectionView */,
 				1C8CCFD129630E2200AF59C4 /* LoadingView */,
-				1C8CCFD429630E4C00AF59C4 /* HomeView */,
 				1C8CCFFB2964040B00AF59C4 /* ProductDetailPageView */,
-				1C8CCFF92963FC5D00AF59C4 /* Tabbar.swift */,
+				1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */,
 				1CC34BFE29752665003BC3B7 /* LoginView.swift */,
 			);
 			path = View;
@@ -190,14 +211,13 @@
 			path = LoadingView;
 			sourceTree = "<group>";
 		};
-		1C8CCFD429630E4C00AF59C4 /* HomeView */ = {
+		1C8CCFD429630E4C00AF59C4 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				1C590A1029702A1A007DD650 /* MakingDirectly */,
 				1C590A0F29702A15007DD650 /* CollectionOfTip */,
-				1C8CCFD529630E5A00AF59C4 /* HomeView.swift */,
+				1C8CCFD529630E5A00AF59C4 /* MainViewController.swift */,
 			);
-			path = HomeView;
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		1C8CCFD729630E6400AF59C4 /* CocktailInformationView */ = {
@@ -216,7 +236,6 @@
 				1C8CCFDA29630E8B00AF59C4 /* IngredientView */,
 				1C8CCFDC29630E9C00AF59C4 /* ToolView */,
 				1C8CCFDB29630E9600AF59C4 /* SkillView */,
-				1C6609B1296A68BE0026CF9E /* Flow */,
 				1C8CCFDD29630EBE00AF59C4 /* CocktailInformationView.swift */,
 			);
 			path = CollectionView;
@@ -269,6 +288,32 @@
 				1C8CCFFC2964043000AF59C4 /* MainContentView.swift */,
 			);
 			path = ProductDetailPageView;
+			sourceTree = "<group>";
+		};
+		1CD9C3BB29926156007F277B /* TabBarCore */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C3C129926503007F277B /* HomeBarView */,
+				1CD9C3BC299264AF007F277B /* CocktailView */,
+				1C8CCFD429630E4C00AF59C4 /* MainView */,
+			);
+			path = TabBarCore;
+			sourceTree = "<group>";
+		};
+		1CD9C3BC299264AF007F277B /* CocktailView */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C3BD299264C4007F277B /* CocktailViewController.swift */,
+			);
+			path = CocktailView;
+			sourceTree = "<group>";
+		};
+		1CD9C3C129926503007F277B /* HomeBarView */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C3BF299264EF007F277B /* HomeBarViewController.swift */,
+			);
+			path = HomeBarView;
 			sourceTree = "<group>";
 		};
 		4A9696E8F355A9FAC8D61F7D /* Frameworks */ = {
@@ -402,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD9C3BE299264C4007F277B /* CocktailViewController.swift in Sources */,
 				1C8CCFEC29630F7D00AF59C4 /* ToolView.swift in Sources */,
 				1C8CCFC129630CAD00AF59C4 /* ViewController.swift in Sources */,
 				1C8CCFF429630FD500AF59C4 /* SkillCollectionView.swift in Sources */,
@@ -409,24 +455,30 @@
 				1C590A1229702C3C007DD650 /* CollectionOfTipView.swift in Sources */,
 				1C8CCFD329630E2C00AF59C4 /* LoadingView.swift in Sources */,
 				1C8CCFF229630FC300AF59C4 /* SkillView.swift in Sources */,
-				1C6609B3296AB6FF0026CF9E /* Coordinator.swift in Sources */,
 				1C8CCFEE29630F8700AF59C4 /* ToolCollectionView.swift in Sources */,
-				1C6609B5296AB8420026CF9E /* MainCoordinator.swift in Sources */,
+				1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionView.swift in Sources */,
 				1C8CCFE829630F4100AF59C4 /* IngredientCollectionView.swift in Sources */,
 				1C8CCFE629630F3200AF59C4 /* IngredientView.swift in Sources */,
+				1C021C8C298E463500BA0B19 /* AppCoordinator.swift in Sources */,
 				1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */,
 				1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */,
-				1C8CCFFA2963FC5D00AF59C4 /* Tabbar.swift in Sources */,
+				1C8CCFFA2963FC5D00AF59C4 /* TabbarController.swift in Sources */,
 				1C8CCFF029630F9200AF59C4 /* ToolCollectionViewCell.swift in Sources */,
 				1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */,
+				1C021C8A298E45FF00BA0B19 /* Coordinator.swift in Sources */,
+				1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */,
+				1C5B1C9A299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift in Sources */,
 				1C8CCFE229630EF300AF59C4 /* BaseCollectionView.swift in Sources */,
 				1C590A1629702CA1007DD650 /* CollectionOfTipCell.swift in Sources */,
 				1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */,
-				1C6609BC296AD6260026CF9E /* Main.swift in Sources */,
+				1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */,
 				1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */,
+				1CD9C3C0299264EF007F277B /* HomeBarViewController.swift in Sources */,
 				1C8CCFE429630F0900AF59C4 /* BaseView.swift in Sources */,
 				1C8CCFEA29630F4F00AF59C4 /* IngredientCollectionViewCell.swift in Sources */,
-				1C8CCFD629630E5A00AF59C4 /* HomeView.swift in Sources */,
+				1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */,
+				1C8CCFD629630E5A00AF59C4 /* MainViewController.swift in Sources */,
+				1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */,
 				1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */,
 				1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */,
 			);
