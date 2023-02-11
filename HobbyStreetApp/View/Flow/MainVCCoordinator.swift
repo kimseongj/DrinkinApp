@@ -7,14 +7,8 @@
 
 import UIKit
 
-class MainVCCoordinator: Coordinator, MainViewDelegate {
-    func pushChooseCocktailVC() {
-        let chooseCocktailCoordinator = ChooseCocktailCoordinator(navigationController: navigationController)
-        chooseCocktailCoordinator.parentCoordinator .self
-        childCoordinators.append(chooseCocktailCoordinator)
-        chooseViewCoordinator.start()
-    }
-    
+class MainVCCoordinator: Coordinator, MainViewDelegate{
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     
@@ -27,9 +21,17 @@ class MainVCCoordinator: Coordinator, MainViewDelegate {
     
     func startPush() -> UINavigationController {
         let mainViewController = MainViewController()
-        //mainViewController.delegate = self
+        mainViewController.delegate = self
         navigationController.setViewControllers([mainViewController], animated: false)
-        
         return navigationController
+    }
+    
+    func pushChooseCocktailVC() {
+        let preferCocktailSelectionViewCoordinator = PreferCocktailSelectionViewCoordinator(navigationController: navigationController)
+        
+        preferCocktailSelectionViewCoordinator.parentCoordinator = self
+        childCoordinators.append(preferCocktailSelectionViewCoordinator)
+        
+        preferCocktailSelectionViewCoordinator.start()
     }
 }

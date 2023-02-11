@@ -10,6 +10,7 @@ import UIKit
 class AppCoordinator: NSObject, Coordinator {
     var childCoordinators = [Coordinator]()
     let window: UIWindow?
+    static var tabBarHeight: CGFloat = 0
     
     init(_ window: UIWindow?) {
         self.window = window
@@ -17,8 +18,9 @@ class AppCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        let tabbarController = TabbarController()
-        self.window?.rootViewController = tabbarController
+        let tabBarController = TabBarController()
+        self.window?.rootViewController = tabBarController
+        AppCoordinator.tabBarHeight = tabBarController.tabBar.frame.size.height
     }
     
 //    func chooseCocktail() {

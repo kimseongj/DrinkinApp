@@ -12,11 +12,14 @@
 		1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */; };
 		1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */; };
 		1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */; };
-		1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */; };
+		1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift */; };
+		1C5475F529979CB10034C1D5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5475F429979CB10034C1D5 /* TabBarController.swift */; };
+		1C5475F72997B4180034C1D5 /* PreferBaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5475F62997B4180034C1D5 /* PreferBaseCollectionView.swift */; };
 		1C590A1229702C3C007DD650 /* CollectionOfTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C590A1129702C3C007DD650 /* CollectionOfTipView.swift */; };
 		1C590A1629702CA1007DD650 /* CollectionOfTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C590A1529702CA1007DD650 /* CollectionOfTipCell.swift */; };
 		1C5B1C9A299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B1C99299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift */; };
 		1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609BB296AD6260026CF9E /* PreferCocktail.swift */; };
+		1C77121B29971CAB007A38C7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77121A29971CAB007A38C7 /* File.swift */; };
 		1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */; };
 		1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */; };
 		1C8CCFC129630CAD00AF59C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC029630CAD00AF59C4 /* ViewController.swift */; };
@@ -37,7 +40,6 @@
 		1C8CCFF229630FC300AF59C4 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF129630FC300AF59C4 /* SkillView.swift */; };
 		1C8CCFF429630FD500AF59C4 /* SkillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */; };
 		1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */; };
-		1C8CCFFA2963FC5D00AF59C4 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */; };
 		1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFC2964043000AF59C4 /* MainContentView.swift */; };
 		1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */; };
 		1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC34BFE29752665003BC3B7 /* LoginView.swift */; };
@@ -52,11 +54,14 @@
 		1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCCoordinator.swift; sourceTree = "<group>"; };
 		1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailVCCoordinator.swift; sourceTree = "<group>"; };
 		1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarVCCoordinator.swift; sourceTree = "<group>"; };
-		1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionView.swift; sourceTree = "<group>"; };
+		1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionViewController.swift; sourceTree = "<group>"; };
+		1C5475F429979CB10034C1D5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1C5475F62997B4180034C1D5 /* PreferBaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferBaseCollectionView.swift; sourceTree = "<group>"; };
 		1C590A1129702C3C007DD650 /* CollectionOfTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionOfTipView.swift; sourceTree = "<group>"; };
 		1C590A1529702CA1007DD650 /* CollectionOfTipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionOfTipCell.swift; sourceTree = "<group>"; };
 		1C5B1C99299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionViewCoordinator.swift; sourceTree = "<group>"; };
 		1C6609BB296AD6260026CF9E /* PreferCocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktail.swift; sourceTree = "<group>"; };
+		1C77121A29971CAB007A38C7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1C8CCFB929630CAD00AF59C4 /* HobbyStreetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyStreetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		1C8CCFF129630FC300AF59C4 /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
 		1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionView.swift; sourceTree = "<group>"; };
 		1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
-		1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		1C8CCFFC2964043000AF59C4 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeView.swift; sourceTree = "<group>"; };
 		1CC34BFE29752665003BC3B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -118,9 +122,18 @@
 		1C347DCE2984F17C0054DFE7 /* PreferCocktailSelectionView */ = {
 			isa = PBXGroup;
 			children = (
-				1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionView.swift */,
+				1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift */,
+				1C5475F62997B4180034C1D5 /* PreferBaseCollectionView.swift */,
 			);
 			path = PreferCocktailSelectionView;
+			sourceTree = "<group>";
+		};
+		1C5475F329979C960034C1D5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1CD9C3BB29926156007F277B /* TabBarCore */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		1C590A0F29702A15007DD650 /* CollectionOfTip */ = {
@@ -156,6 +169,22 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		1C77121829971C90007A38C7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1C77121929971C9D007A38C7 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1C77121929971C9D007A38C7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1C77121A29971CAB007A38C7 /* File.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		1C8CCFB029630CAD00AF59C4 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +206,7 @@
 		1C8CCFBB29630CAD00AF59C4 /* HobbyStreetApp */ = {
 			isa = PBXGroup;
 			children = (
+				1C77121829971C90007A38C7 /* Data */,
 				1C6609B6296AD5450026CF9E /* Domain */,
 				1C8CCFD029630E1900AF59C4 /* View */,
 				1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */,
@@ -192,12 +222,11 @@
 		1C8CCFD029630E1900AF59C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1CD9C3BB29926156007F277B /* TabBarCore */,
+				1C5475F329979C960034C1D5 /* TabBar */,
 				1C021C88298E377000BA0B19 /* Flow */,
 				1C347DCE2984F17C0054DFE7 /* PreferCocktailSelectionView */,
 				1C8CCFD129630E2200AF59C4 /* LoadingView */,
 				1C8CCFFB2964040B00AF59C4 /* ProductDetailPageView */,
-				1C8CCFF92963FC5D00AF59C4 /* TabbarController.swift */,
 				1CC34BFE29752665003BC3B7 /* LoginView.swift */,
 			);
 			path = View;
@@ -293,6 +322,7 @@
 		1CD9C3BB29926156007F277B /* TabBarCore */ = {
 			isa = PBXGroup;
 			children = (
+				1C5475F429979CB10034C1D5 /* TabBarController.swift */,
 				1CD9C3C129926503007F277B /* HomeBarView */,
 				1CD9C3BC299264AF007F277B /* CocktailView */,
 				1C8CCFD429630E4C00AF59C4 /* MainView */,
@@ -456,20 +486,21 @@
 				1C8CCFD329630E2C00AF59C4 /* LoadingView.swift in Sources */,
 				1C8CCFF229630FC300AF59C4 /* SkillView.swift in Sources */,
 				1C8CCFEE29630F8700AF59C4 /* ToolCollectionView.swift in Sources */,
-				1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionView.swift in Sources */,
+				1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift in Sources */,
 				1C8CCFE829630F4100AF59C4 /* IngredientCollectionView.swift in Sources */,
 				1C8CCFE629630F3200AF59C4 /* IngredientView.swift in Sources */,
 				1C021C8C298E463500BA0B19 /* AppCoordinator.swift in Sources */,
 				1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */,
 				1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */,
-				1C8CCFFA2963FC5D00AF59C4 /* TabbarController.swift in Sources */,
 				1C8CCFF029630F9200AF59C4 /* ToolCollectionViewCell.swift in Sources */,
 				1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */,
 				1C021C8A298E45FF00BA0B19 /* Coordinator.swift in Sources */,
+				1C5475F529979CB10034C1D5 /* TabBarController.swift in Sources */,
 				1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */,
 				1C5B1C9A299387060018B7BB /* PreferCocktailSelectionViewCoordinator.swift in Sources */,
 				1C8CCFE229630EF300AF59C4 /* BaseCollectionView.swift in Sources */,
 				1C590A1629702CA1007DD650 /* CollectionOfTipCell.swift in Sources */,
+				1C5475F72997B4180034C1D5 /* PreferBaseCollectionView.swift in Sources */,
 				1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */,
 				1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */,
 				1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */,
@@ -477,6 +508,7 @@
 				1C8CCFE429630F0900AF59C4 /* BaseView.swift in Sources */,
 				1C8CCFEA29630F4F00AF59C4 /* IngredientCollectionViewCell.swift in Sources */,
 				1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */,
+				1C77121B29971CAB007A38C7 /* File.swift in Sources */,
 				1C8CCFD629630E5A00AF59C4 /* MainViewController.swift in Sources */,
 				1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */,
 				1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */,

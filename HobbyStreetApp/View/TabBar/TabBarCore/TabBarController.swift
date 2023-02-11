@@ -1,15 +1,14 @@
-////
-////  Tabbar.swift
-////  HobbyStreetApp
-////
-////  Created by kimseongjun on 2023/01/03.
-////
-
+//
+//  TabBarController.swift
+//  HobbyStreetApp
+//
+//  Created by kimseongjun on 2023/02/11.
+//
 
 import UIKit
 
-class TabbarController: UITabBarController, UITabBarControllerDelegate {
-    
+class TabBarController: UITabBarController, UITabBarControllerDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBar()

@@ -1,12 +1,23 @@
 import UIKit
 
+//protocol PreferCocktailSelectionViewCoordinator: AnyObject {
+//    func pushChooseCocktailVC(_ navigationController: UINavigationController)
+//}
+//
+//extension PreferCocktailSelectionViewCoordinator {
+//    func pushChooseCocktailVC(_ navigationController: UINavigationController) {
+//        let vc = ViewController()
+//        navigationController.pushViewController(vc, animated: true)
+//    }
+//}
+
 protocol MainViewDelegate: AnyObject {
     func pushChooseCocktailVC()
 }
 
 class MainViewController: UIViewController {
-    weak var coordinator: Coordinator?
-    weak var delegate: MainViewDelegate?
+    //var coordinator: PreferCocktailSelectionViewCoordinator?
+    var delegate: MainViewDelegate?
     
     let skeletonView: UIImageView = {
         let skeletonView = UIImageView()
@@ -37,7 +48,6 @@ class MainViewController: UIViewController {
         startButton.layer.borderColor = UIColor(red: 0.467, green: 0.467, blue: 0.459, alpha: 1).cgColor
         startButton.layer.borderWidth = 3
         startButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
         return startButton
     }()
     
@@ -77,7 +87,8 @@ class MainViewController: UIViewController {
     }
     
     @objc func buttonAction() {
-        delegate?.pushChooseCocktailVC()
+            delegate?.pushChooseCocktailVC()//self.navigationController!)
+            print("asd")
     }
 }
 

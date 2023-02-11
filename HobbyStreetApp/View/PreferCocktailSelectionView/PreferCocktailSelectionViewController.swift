@@ -31,11 +31,14 @@ class PreferCocktailSelectionViewController: UIViewController {
     let exitButton: UIButton = {
         let exitButton = UIButton()
         exitButton.setImage(UIImage(systemName: "multiply"), for: .normal)
+        exitButton.addTarget(self, action: #selector(pushExitButton), for: .touchUpInside)
+        //(self, action: #selector(pushExitButton(), for: .touchUpInside)
+        
         return exitButton
     }()
     
     //MARK:- baseCollectionView
-    private var baseCollectionView: UICollectionView =  {
+    private var baseCollectionView: PreferBaseCollectionView =  {
         let flowLayout: UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
@@ -126,7 +129,8 @@ class PreferCocktailSelectionViewController: UIViewController {
         }
         
         completeSelectionButton.snp.makeConstraints { make in
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-AppCoordinator.tabBarHeight)
             make.height.equalTo(54)
         }
         
@@ -136,6 +140,10 @@ class PreferCocktailSelectionViewController: UIViewController {
         baseCollectionView.register(BaseCell.self, forCellWithReuseIdentifier: "BaseCell")
         self.baseCollectionView.delegate = self
         self.baseCollectionView.dataSource = self
+    }
+    
+    @objc func pushExitButton() {
+        self.dismiss(animated: true)
     }
     
 }
