@@ -92,7 +92,7 @@ extension BaseView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayo
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
         
         let baseButtonNameSize = (baseButtonName as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
-        
+        print(baseButtonNameSize)
         return CGSize(width: baseButtonNameSize.width + 32, height: 30 )
     }
     

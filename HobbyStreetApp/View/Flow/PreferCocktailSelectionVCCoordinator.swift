@@ -19,11 +19,11 @@ class PreferCocktailSelectionViewCoordinator: Coordinator {
     func start() {
         let vc = PreferCocktailSelectionViewController()
         vc.modalPresentationStyle = .fullScreen
-        
         //preferCocktailSelectionViewController.delegate = self
         navigationController.present(vc, animated: true)
     }
     
+    //func push
     
 
 }

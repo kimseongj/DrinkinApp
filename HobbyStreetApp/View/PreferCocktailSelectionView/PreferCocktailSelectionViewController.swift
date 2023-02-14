@@ -38,54 +38,26 @@ class PreferCocktailSelectionViewController: UIViewController {
     }()
     
     //MARK:- baseCollectionView
-    private var baseCollectionView: PreferBaseCollectionView =  {
-        let flowLayout: UICollectionViewFlowLayout = {
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 8
-            return layout
-        }()
+    let preferBaseView = PreferBaseView()
         
-        let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        view.isScrollEnabled = true
-        view.showsVerticalScrollIndicator = true
-        view.showsHorizontalScrollIndicator = false
-        view.contentInset = .zero
-        view.clipsToBounds = true
-        view.register(BaseCell.self, forCellWithReuseIdentifier: "BaseCell")
-        
-        return view
-    }()
-    
-    private let data = ["위스키 베이스", "리큐르 베이스", "보드카 베이스", "진 베이스"]
-    
     //MARK:- cocktailScrollView
-    let cocktailScrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.showsVerticalScrollIndicator = false
-        return scrollView
-    }()
+    let cocktailScrollView = CocktailScrollView()
     
-   //MARK:- cocktailStackView
-    private let cocktailStackView: UIStackView = {
-        let cocktailStackView = UIStackView()
-        cocktailStackView.axis = .vertical
-        cocktailStackView.spacing
-        cocktailStackView.distribution
-        return cocktailStackView
-    }()
-    
+   
     private let completeSelectionButton: UIButton = {
         let completeSelectionButton = UIButton()
         completeSelectionButton.layer.borderColor = UIColor(red: 0.467, green: 0.467, blue: 0.459, alpha: 1).cgColor
         completeSelectionButton.layer.borderWidth = 3
+        completeSelectionButton.backgroundColor = .black
+        completeSelectionButton.setTitle("선택 완료", for: .normal)
+        completeSelectionButton.titleLabel?.textColor = UIColor(red: 0.909, green: 0.906, blue: 0.903, alpha: 1)
+        completeSelectionButton.titleLabel?.font = UIFont(name: "Pretendard-Black", size: 15)
         return completeSelectionButton
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setBaseCollectionView()
         view.backgroundColor = .white
     }
     
@@ -95,9 +67,9 @@ class PreferCocktailSelectionViewController: UIViewController {
         view.addSubview(mainLabel)
         view.addSubview(subLabel)
         view.addSubview(exitButton)
-        view.addSubview(baseCollectionView)
-        view.addSubview(completeSelectionButton)
+        view.addSubview(preferBaseView)
         view.addSubview(cocktailScrollView)
+        view.addSubview(completeSelectionButton)
         
         mainLabel.snp.makeConstraints { make in
             make.top.equalTo(safeArea).offset(16)
@@ -114,15 +86,15 @@ class PreferCocktailSelectionViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-22)
         }
         
-        baseCollectionView.snp.makeConstraints { make in
+        preferBaseView.snp.makeConstraints { make in
             make.top.equalTo(exitButton.snp.bottom).offset(20)
-            make.trailing.equalToSuperview().offset(16)
-            make.leading.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
             make.height.equalTo(40)
         }
         
         cocktailScrollView.snp.makeConstraints { make in
-            make.top.equalTo(baseCollectionView.snp.bottom).offset(11)
+            make.top.equalTo(preferBaseView.snp.bottom).offset(11)
             make.leading.equalToSuperview().offset(7)
             make.trailing.equalToSuperview().offset(-7)
             make.bottom.equalTo(completeSelectionButton.snp.top)
@@ -130,16 +102,10 @@ class PreferCocktailSelectionViewController: UIViewController {
         
         completeSelectionButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-AppCoordinator.tabBarHeight)
+            make.bottom.equalToSuperview()//(safeArea.snp.bottom)//.offset(-AppCoordinator.tabBarHeight)
             make.height.equalTo(54)
         }
         
-    }
-    
-    func setBaseCollectionView() {
-        baseCollectionView.register(BaseCell.self, forCellWithReuseIdentifier: "BaseCell")
-        self.baseCollectionView.delegate = self
-        self.baseCollectionView.dataSource = self
     }
     
     @objc func pushExitButton() {
@@ -148,67 +114,5 @@ class PreferCocktailSelectionViewController: UIViewController {
     
 }
 
-extension PreferCocktailSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = baseCollectionView.dequeueReusableCell(withReuseIdentifier: BaseCell.id, for: indexPath) as! BaseCell
-        cell.baseNameLabel.text = data[indexPath.row]
-        cell.layoutIfNeeded()
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let baseButtonName = self.data[indexPath.row]
-        
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
-        
-        let baseButtonNameSize = (baseButtonName as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
-        
-        return CGSize(width: baseButtonNameSize.width + 32, height: 30 )
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            15
-        }
-    
-    
-    
-}
 
-final class BaseCell: UICollectionViewCell {
-    
-    static let id = "BaseCell"
-    
-    let baseNameLabel: UILabel = {
-        let baseNameLabel = UILabel()
-        baseNameLabel.sizeToFit()
-        return baseNameLabel
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.cellSetting()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func cellSetting() {
-        self.backgroundColor = .lightGray
-        self.layer.cornerRadius = 14
-        self.layer.borderWidth = 1.4
-        self.addSubview(baseNameLabel)
-        
-        baseNameLabel.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
-        }
-    }
-    
-}
 

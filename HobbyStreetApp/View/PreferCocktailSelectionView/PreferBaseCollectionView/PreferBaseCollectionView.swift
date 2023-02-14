@@ -1,17 +1,17 @@
 //
-//  preferBaseCollectionView.swift
+//  PreferBaseCollectionView.swift
 //  HobbyStreetApp
 //
-//  Created by kimseongjun on 2023/02/11.
+//  Created by kimseongjun on 2023/02/13.
 //
 
 import UIKit
 
 class PreferBaseCollectionView: UICollectionView {
     
-    override var contentSize: CGSize {
+    override var contentSize: CGSize{
         didSet {
-            if oldValue.height != self.contentSize.height {
+            if oldValue.width != self.contentSize.width {
                 invalidateIntrinsicContentSize()
             }
         }
@@ -22,3 +22,4 @@ class PreferBaseCollectionView: UICollectionView {
         return contentSize
     }
 }
+

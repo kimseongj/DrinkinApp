@@ -1,8 +1,13 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+protocol PushToModal: AnyObject {
+    func pushToModal()
+}
 
+class ProductDetailViewController: UIViewController {
+
+    
     let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceVertical = true
@@ -50,4 +55,5 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(receipeView)
         //stackView.addArrangedSubview(commentView)
     }
+    
 }
