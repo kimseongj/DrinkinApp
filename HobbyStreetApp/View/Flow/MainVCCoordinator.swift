@@ -8,6 +8,7 @@
 import UIKit
 
 class MainVCCoordinator: Coordinator, MainViewDelegate{
+    
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
@@ -23,6 +24,7 @@ class MainVCCoordinator: Coordinator, MainViewDelegate{
         let mainViewController = MainViewController()
         mainViewController.delegate = self
         navigationController.setViewControllers([mainViewController], animated: false)
+        
         return navigationController
     }
     
@@ -31,7 +33,14 @@ class MainVCCoordinator: Coordinator, MainViewDelegate{
         
         preferCocktailSelectionViewCoordinator.parentCoordinator = self
         childCoordinators.append(preferCocktailSelectionViewCoordinator)
-        
         preferCocktailSelectionViewCoordinator.start()
+    }
+    
+    func pushProductDetailVC() {
+        let productDetailVCCoordinator = ProductDetailVCCoordinator(navigationController: navigationController)
+        
+        productDetailVCCoordinator.parentCoordinator = self
+        childCoordinators.append(productDetailVCCoordinator)
+        productDetailVCCoordinator.start()
     }
 }

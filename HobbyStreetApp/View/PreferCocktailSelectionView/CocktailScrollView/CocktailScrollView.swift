@@ -35,10 +35,6 @@ class CocktailScrollView: UIScrollView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    private func configureUI() {
-//        self.addSubview(cocktailStackView)
-//        cocktailStackView.addSubview(<#T##view: UIView##UIView#>)
-//    }
     
     
 }

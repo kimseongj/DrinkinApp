@@ -59,6 +59,7 @@ class PreferCocktailSelectionViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         view.backgroundColor = .white
+        MainViewController.login = true
     }
     
     func configureUI() {
@@ -102,7 +103,7 @@ class PreferCocktailSelectionViewController: UIViewController {
         
         completeSelectionButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()//(safeArea.snp.bottom)//.offset(-AppCoordinator.tabBarHeight)
+            make.bottom.equalTo(safeArea.snp.bottom)//.offset(-AppCoordinator.tabBarHeight)
             make.height.equalTo(54)
         }
         

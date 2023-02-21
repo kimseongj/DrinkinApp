@@ -1,9 +1,14 @@
 import UIKit
 import SnapKit
 
+protocol CellDelegate: AnyObject {
+    func pushModalVC()
+}
+
 class BaseCollectionViewCell: UICollectionViewCell {
-    
     static let indentifier = "BaseCell"
+    
+    var delegate: CellDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +39,8 @@ class BaseCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool{
         didSet {
             if isSelected {
+                
+            } else {
                 
             }
         }
