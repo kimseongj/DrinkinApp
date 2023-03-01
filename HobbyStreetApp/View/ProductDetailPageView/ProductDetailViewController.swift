@@ -7,7 +7,6 @@ protocol PushToModal: AnyObject {
 
 class ProductDetailViewController: UIViewController {
 
-    
     let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceVertical = true
@@ -27,13 +26,11 @@ class ProductDetailViewController: UIViewController {
     let cocktailInformationView = CocktailInformationView()
     let receipeView = ReceipeView()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureScrollView()
         configureStackView()
-        
     }
 
     private func configureScrollView(){

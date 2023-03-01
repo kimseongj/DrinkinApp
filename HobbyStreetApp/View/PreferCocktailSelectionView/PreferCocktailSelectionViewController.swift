@@ -40,10 +40,9 @@ class PreferCocktailSelectionViewController: UIViewController {
     //MARK:- baseCollectionView
     let preferBaseView = PreferBaseView()
         
-    //MARK:- cocktailScrollView
-    let cocktailScrollView = CocktailScrollView()
+    //MARK:- cocktailCollectionView
+    let cocktailCollectionView = CocktailCollectionView()
     
-   
     private let completeSelectionButton: UIButton = {
         let completeSelectionButton = UIButton()
         completeSelectionButton.layer.borderColor = UIColor(red: 0.467, green: 0.467, blue: 0.459, alpha: 1).cgColor
@@ -69,7 +68,7 @@ class PreferCocktailSelectionViewController: UIViewController {
         view.addSubview(subLabel)
         view.addSubview(exitButton)
         view.addSubview(preferBaseView)
-        view.addSubview(cocktailScrollView)
+        view.addSubview(cocktailCollectionView)
         view.addSubview(completeSelectionButton)
         
         mainLabel.snp.makeConstraints { make in
@@ -94,7 +93,7 @@ class PreferCocktailSelectionViewController: UIViewController {
             make.height.equalTo(40)
         }
         
-        cocktailScrollView.snp.makeConstraints { make in
+        cocktailCollectionView.snp.makeConstraints { make in
             make.top.equalTo(preferBaseView.snp.bottom).offset(11)
             make.leading.equalToSuperview().offset(7)
             make.trailing.equalToSuperview().offset(-7)

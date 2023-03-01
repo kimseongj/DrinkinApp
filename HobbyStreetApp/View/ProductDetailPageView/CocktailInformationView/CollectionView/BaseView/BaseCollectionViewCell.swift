@@ -8,6 +8,7 @@ protocol CellDelegate: AnyObject {
 class BaseCollectionViewCell: UICollectionViewCell {
     static let indentifier = "BaseCell"
     
+    
     var delegate: CellDelegate?
     
     override init(frame: CGRect) {
@@ -39,8 +40,6 @@ class BaseCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool{
         didSet {
             if isSelected {
-                
-            } else {
                 
             }
         }

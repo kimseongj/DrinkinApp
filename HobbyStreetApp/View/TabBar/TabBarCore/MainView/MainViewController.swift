@@ -8,6 +8,7 @@ protocol MainViewDelegate: AnyObject {
 class MainViewController: UIViewController {
     //var coordinator: PreferCocktailSelectionViewCoordinator?
     var delegate: MainViewDelegate?
+    
     static var login: Bool = false
     
     //MARK:- UnNLoggedinUI
@@ -53,19 +54,40 @@ class MainViewController: UIViewController {
     
     
     //MARK:- LoggedinView
-    lazy var loggedInView = LoggedInView()
+    lazy var loggedInView = UIView()
+    
+    private var recommendCocktailCollectionView: UICollectionView = { // 일단 컬렉션 뷰까지는 만들어지는거 확인했다잉
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumLineSpacing = 8
+        
+        let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        view.isScrollEnabled = true
+        view.showsHorizontalScrollIndicator = false
+        view.showsVerticalScrollIndicator = true
+        view.contentInset = .zero
+        view.backgroundColor = .clear
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setupRecommendCocktailCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         if MainViewController.login {
             configureLoggedinUI()
+            print("로그인")
         } else {
             configureUnLoggedinUI()
+            print("로그인 안됨")
         }
         print("viewWillAppear")
         print(MainViewController.login)
@@ -121,19 +143,51 @@ class MainViewController: UIViewController {
     }
     
     //MARK:- LoginUI
-    private func configureLoggedinUI() {
+    func configureLoggedinUI() {
         view.addSubview(loggedInView)
-        loggedInView.backgroundColor = .white
+        loggedInView.addSubview(recommendCocktailCollectionView)
+        
         loggedInView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview().offset(-AppCoordinator.tabBarHeight)
         }
+        recommendCocktailCollectionView.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview().offset(20)
+            make.trailing.bottom.equalToSuperview().offset(-20)
+        }
+    }
+    
+    func setupRecommendCocktailCollectionView() {
+        recommendCocktailCollectionView.register(LoggedInCell.self, forCellWithReuseIdentifier: "LoggedInCell")
+        recommendCocktailCollectionView.delegate = self
+        recommendCocktailCollectionView.dataSource = self
+        recommendCocktailCollectionView.isPagingEnabled = true
+        recommendCocktailCollectionView.showsHorizontalScrollIndicator = false
     }
     
     @objc func startButtonAction() {
         delegate?.pushChooseCocktailVC()//self.navigationController!)
         print("asd")
     }
+    @objc func seeMoreButtonAction() {
+        delegate?.pushProductDetailVC()
+        print("SeeMoreButon was Pushed")
+    }
 }
 
-
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return recommendCocktailCollectionView.bounds.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = recommendCocktailCollectionView.dequeueReusableCell(withReuseIdentifier: "LoggedInCell", for: indexPath) as! LoggedInCell
+        //cell.imageView.image = data[indexPath.row]
+        cell.seeMoreButton.addTarget(self, action: #selector(seeMoreButtonAction), for: .touchUpInside)
+        return cell
+    }
+}
