@@ -12,9 +12,8 @@ class CocktailInformationView: UIView {
         return title
     }()
     
-    let baseView = BaseView()
-    let ingredientView = IngredientView()
     let toolView = ToolView()
+    let glassView = GlassView()
     let skillView = SkillView()
     
     override init(frame: CGRect) {
@@ -29,9 +28,8 @@ class CocktailInformationView: UIView {
     
     func configureUI() {
         self.addSubview(cocktailNameTitle)
-        self.addSubview(baseView)
-        self.addSubview(ingredientView)
         self.addSubview(toolView)
+        self.addSubview(glassView)
         self.addSubview(skillView)
         
         cocktailNameTitle.snp.makeConstraints { make in
@@ -41,27 +39,20 @@ class CocktailInformationView: UIView {
             make.height.equalTo(17)
         }
         
-        baseView.snp.makeConstraints { make in
-            make.top.equalTo(cocktailNameTitle.snp.bottom)
-            make.trailing.leading.equalToSuperview()
-        }
-        
-        ingredientView.snp.makeConstraints {make in
-            make.top.equalTo(baseView.snp.bottom)
-            make.trailing.leading.equalToSuperview()
-        }
-        
         toolView.snp.makeConstraints { make in
-            make.top.equalTo(ingredientView.snp.bottom)
+            make.top.equalTo(cocktailNameTitle.snp.bottom)
             make.trailing.leading.equalToSuperview()
         }
         
         skillView.snp.makeConstraints { make in
             make.top.equalTo(toolView.snp.bottom)
-            make.leading.trailing.equalToSuperview()
+            make.trailing.leading.equalToSuperview()
+        }
+        
+        glassView.snp.makeConstraints {make in
+            make.top.equalTo(skillView.snp.bottom)
+            make.trailing.leading.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }
 }
-
-//뷰가 총 12개

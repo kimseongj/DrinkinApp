@@ -2,84 +2,86 @@ import UIKit
 import SnapKit
 import AlignedCollectionViewFlowLayout
 
-class IngredientView: UIView {
-
-    var ingredientLabelView: UIView = {
-        let ilv = UIView()
-        ilv.backgroundColor = .white
-        return ilv
+class GlassView: UIView {
+    
+    var delegate: ProductDetailViewDelegate?
+    
+    var glassLabelView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
     }()
     
-    var ingredientCollectionView: IngredientCollectionView = {
+    var glassCollectionView: GlassCollectionView = {
         let layout = UICollectionViewLayout()
-        let bcv = IngredientCollectionView(frame: .zero, collectionViewLayout: AlignedCollectionViewFlowLayout(horizontalAlignment:  .left, verticalAlignment: .top))
-        bcv.backgroundColor = .white
-        bcv.layoutIfNeeded()
-        return bcv
+        let collecionView = GlassCollectionView(frame: .zero, collectionViewLayout: AlignedCollectionViewFlowLayout(horizontalAlignment:  .left, verticalAlignment: .top))
+        collecionView.backgroundColor = .white
+        collecionView.layoutIfNeeded()
+        return collecionView
     }()
     
-    let ingredientLabel: UILabel = {
+    let glassLabel: UILabel = {
         let bl = UILabel()
         bl.text = "재료"
         bl.textColor = .black
         bl.font = UIFont.systemFont(ofSize: 17)
         return bl
     }()
-
+    
     let ingredientButtonName = ["asd", "asdzxc", "asdqweqwe", "123sdasdzxc", "asdasfasd", "123asdaszxczxasd123"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
         configureUI()
-        setIngredientCollectionView()
+        setGlassCollectionView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func configureUI() {
-        self.addSubview(ingredientLabelView)
-        ingredientLabelView.addSubview(ingredientLabel)
-        self.addSubview(ingredientCollectionView)
+        self.addSubview(glassLabelView)
+        glassLabelView.addSubview(glassLabel)
+        self.addSubview(glassCollectionView)
         
         
-        ingredientLabelView.snp.makeConstraints { make in
+        glassLabelView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().offset(24)
-            make.bottom.equalTo(ingredientCollectionView)
+            make.bottom.equalTo(glassCollectionView)
             make.width.equalTo(62)
         }
         
-        ingredientLabel.snp.makeConstraints { make in
+        glassLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview()
         }
         
-        ingredientCollectionView.snp.makeConstraints { make in
+        glassCollectionView.snp.makeConstraints { make in
             make.trailing.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(24)
-            make.leading.equalTo(ingredientLabelView.snp.trailing)
+            make.leading.equalTo(glassLabelView.snp.trailing)
         }
         
     }
     
-    func setIngredientCollectionView() {
-        ingredientCollectionView.register(IngredientCollectionViewCell.self, forCellWithReuseIdentifier: "IngredientCell")
-        ingredientCollectionView.delegate = self
-        ingredientCollectionView.dataSource = self
+    func setGlassCollectionView() {
+        glassCollectionView.register(GlassCollectionViewCell.self, forCellWithReuseIdentifier: "GlassCell")
+        glassCollectionView.delegate = self
+        glassCollectionView.dataSource = self
     }
     
 }
 
-extension IngredientView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension GlassView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ingredientButtonName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = ingredientCollectionView.dequeueReusableCell(withReuseIdentifier: "IngredientCell", for: indexPath) as! IngredientCollectionViewCell
+        let cell = glassCollectionView.dequeueReusableCell(withReuseIdentifier: "GlassCell", for: indexPath) as! GlassCollectionViewCell
         cell.label.text = ingredientButtonName[indexPath.row]
         cell.layoutIfNeeded()
         return cell
@@ -97,7 +99,12 @@ extension IngredientView: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            15
-        }
+        15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pushGlassModalVC()
+    }
+    
 }
 

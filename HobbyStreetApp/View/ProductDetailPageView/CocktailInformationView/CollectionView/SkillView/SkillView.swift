@@ -4,6 +4,8 @@ import AlignedCollectionViewFlowLayout
 
 class SkillView: UIView {
 
+    var delegate: ProductDetailViewDelegate?
+    
     var skillLabelView: UIView = {
         let slv = UIView()
         slv.backgroundColor = .white
@@ -99,5 +101,9 @@ extension SkillView: UICollectionViewDataSource, UICollectionViewDelegateFlowLay
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             15
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pushSkillModalVC()
+    }
 }
 

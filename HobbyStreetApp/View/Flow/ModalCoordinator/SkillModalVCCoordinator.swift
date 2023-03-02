@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BuildModalVCCoordinator: Coordinator {
+class SkillModalVCCoordinator: Coordinator {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController

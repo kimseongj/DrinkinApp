@@ -2,7 +2,7 @@ import UIKit
 
 class ToolCollectionView: UICollectionView {
     
-    override var contentSize: CGSize{
+    override var contentSize: CGSize {
         didSet {
             if oldValue.height != self.contentSize.height {
                 invalidateIntrinsicContentSize()
@@ -14,5 +14,4 @@ class ToolCollectionView: UICollectionView {
         layoutIfNeeded()
         return contentSize
     }
-    
 }

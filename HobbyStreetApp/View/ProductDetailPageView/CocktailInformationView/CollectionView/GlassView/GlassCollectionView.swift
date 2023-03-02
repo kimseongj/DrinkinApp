@@ -1,6 +1,6 @@
 import UIKit
 
-class IngredientCollectionView: UICollectionView {
+class GlassCollectionView: UICollectionView {
     
     override var contentSize: CGSize{
         didSet {

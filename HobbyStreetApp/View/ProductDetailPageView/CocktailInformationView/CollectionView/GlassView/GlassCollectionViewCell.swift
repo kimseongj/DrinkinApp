@@ -1,9 +1,9 @@
 import UIKit
 import SnapKit
 
-class IngredientCollectionViewCell: UICollectionViewCell {
+class GlassCollectionViewCell: UICollectionViewCell {
     
-    static let indentifier = "IngredientCell"
+    static let indentifier = "GlassCell"
     
     override init(frame: CGRect) {
         super.init(frame: frame)

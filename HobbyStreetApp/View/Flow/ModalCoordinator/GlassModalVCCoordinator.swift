@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GlassModalVCCoordinator {
+class GlassModalVCCoordinator: Coordinator {
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController

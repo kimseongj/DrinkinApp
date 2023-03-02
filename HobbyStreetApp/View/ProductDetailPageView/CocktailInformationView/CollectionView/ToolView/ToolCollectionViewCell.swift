@@ -2,7 +2,6 @@ import UIKit
 import SnapKit
 
 class ToolCollectionViewCell: UICollectionViewCell {
-    
     static let indentifier = "ToolCell"
     
     override init(frame: CGRect) {

@@ -20,12 +20,4 @@ class ToolModalVCCoordinator: Coordinator {
         let vc = ToolModalViewController()
         navigationController.present(vc, animated: true)
     }
-    
-    
-    
-    func startGlassModal() {
-        let vc = ToolModalViewController()
-        navigationController.present(vc, animated: true)
-    }
-    
 }

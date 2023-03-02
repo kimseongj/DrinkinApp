@@ -9,8 +9,6 @@ import UIKit
 
 class ProductDetailVCCoordinator: Coordinator, ProductDetailViewDelegate {
     
-    
-    
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
@@ -20,8 +18,14 @@ class ProductDetailVCCoordinator: Coordinator, ProductDetailViewDelegate {
     }
     
     func start() {
-        let vc = ProductDetailViewController()
-        navigationController.pushViewController(vc, animated: true)
+        let productDetailViewController = ProductDetailViewController()
+        
+        
+        productDetailViewController.cocktailInformationView.toolView.delegate = self
+        productDetailViewController.cocktailInformationView.skillView.delegate = self
+        productDetailViewController.cocktailInformationView.glassView.delegate = self
+
+        navigationController.pushViewController(productDetailViewController, animated: true)
     }
     
     func pushToolModalVC() {
@@ -31,17 +35,17 @@ class ProductDetailVCCoordinator: Coordinator, ProductDetailViewDelegate {
         toolModalVCCoordinator.start()
     }
     
-    func pushBuildModalVC() {
-        let modalVCCoordinator = ModalVCCoordinator(navigationController: navigationController)
-        modalVCCoordinator.parentCoordinator = self
-        childCoordinators.append(modalVCCoordinator)
-        modalVCCoordinator.startToolModal()
+    func pushSkillModalVC() {
+        let buildModalVCCoordinator = SkillModalVCCoordinator(navigationController: navigationController)
+        buildModalVCCoordinator.parentCoordinator = self
+        childCoordinators.append(buildModalVCCoordinator)
+        buildModalVCCoordinator.start()
     }
     
     func pushGlassModalVC() {
-        let modalVCCoordinator = ModalVCCoordinator(navigationController: navigationController)
-        modalVCCoordinator.parentCoordinator = self
-        childCoordinators.append(modalVCCoordinator)
-        modalVCCoordinator.startToolModal()
+        let glassModalVCCoordinator = GlassModalVCCoordinator(navigationController: navigationController)
+        glassModalVCCoordinator.parentCoordinator = self
+        childCoordinators.append(glassModalVCCoordinator)
+        glassModalVCCoordinator.start()
     }
 }

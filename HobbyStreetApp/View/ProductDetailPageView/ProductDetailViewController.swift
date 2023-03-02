@@ -3,25 +3,23 @@ import SnapKit
 
 protocol ProductDetailViewDelegate: AnyObject {
     func pushToolModalVC()
-    func pushBuildModalVC()
+    func pushSkillModalVC()
     func pushGlassModalVC()
 }
 
 class ProductDetailViewController: UIViewController {
-
-    var delegate: ProductDetailViewDelegate?
-    
+   
     let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceVertical = true
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
-
+    
     let stackView : UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-//        stackView.alignment = .fill
+        //        stackView.alignment = .fill
         stackView.spacing = 1
         return stackView
     }()
@@ -36,21 +34,21 @@ class ProductDetailViewController: UIViewController {
         configureScrollView()
         configureStackView()
     }
-
+    
     private func configureScrollView(){
         view.addSubview(scrollView)
-                scrollView.snp.makeConstraints { make in
-                    make.top.bottom.leading.trailing.equalToSuperview()
-                }
+        scrollView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
     }
-
+    
     private func configureStackView(){
         scrollView.addSubview(stackView)
-
-                stackView.snp.makeConstraints { make in
-                    make.top.bottom.leading.trailing.equalToSuperview()
-                    make.width.equalToSuperview()
-                }
+        
+        stackView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+            make.width.equalToSuperview()
+        }
         stackView.addArrangedSubview(mainContentView)
         stackView.addArrangedSubview(cocktailInformationView)
         stackView.addArrangedSubview(receipeView)
