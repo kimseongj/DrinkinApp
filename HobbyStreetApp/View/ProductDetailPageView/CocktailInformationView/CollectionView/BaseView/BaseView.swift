@@ -4,6 +4,8 @@ import AlignedCollectionViewFlowLayout
 
 class BaseView: UIView {
 
+    var delegate: ProductDetailViewDelegate?
+    
     var baseLabelView: UIView = {
         let blv = UIView()
         blv.backgroundColor = .white
@@ -92,12 +94,16 @@ extension BaseView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayo
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
         
         let baseButtonNameSize = (baseButtonName as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
-        print(baseButtonNameSize)
+        
         return CGSize(width: baseButtonNameSize.width + 32, height: 30 )
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             15
-        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pushToolModalVC()
+    }
 }
 

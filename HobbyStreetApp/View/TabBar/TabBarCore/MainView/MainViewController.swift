@@ -6,7 +6,7 @@ protocol MainViewDelegate: AnyObject {
 }
 
 class MainViewController: UIViewController {
-    //var coordinator: PreferCocktailSelectionViewCoordinator?
+
     var delegate: MainViewDelegate?
     
     static var login: Bool = false

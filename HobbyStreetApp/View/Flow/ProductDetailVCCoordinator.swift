@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ProductDetailVCCoordinator: Coordinator, CellDelegate  {
+class ProductDetailVCCoordinator: Coordinator, ProductDetailViewDelegate {
+    
+    
     
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
@@ -22,7 +24,24 @@ class ProductDetailVCCoordinator: Coordinator, CellDelegate  {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func pushModalVC() {
+    func pushToolModalVC() {
+        let toolModalVCCoordinator = ToolModalVCCoordinator(navigationController: navigationController)
+        toolModalVCCoordinator.parentCoordinator = self
+        childCoordinators.append(toolModalVCCoordinator)
+        toolModalVCCoordinator.start()
+    }
+    
+    func pushBuildModalVC() {
         let modalVCCoordinator = ModalVCCoordinator(navigationController: navigationController)
+        modalVCCoordinator.parentCoordinator = self
+        childCoordinators.append(modalVCCoordinator)
+        modalVCCoordinator.startToolModal()
+    }
+    
+    func pushGlassModalVC() {
+        let modalVCCoordinator = ModalVCCoordinator(navigationController: navigationController)
+        modalVCCoordinator.parentCoordinator = self
+        childCoordinators.append(modalVCCoordinator)
+        modalVCCoordinator.startToolModal()
     }
 }

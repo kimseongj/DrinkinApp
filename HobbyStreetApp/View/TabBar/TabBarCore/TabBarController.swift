@@ -14,24 +14,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         setTabBar()
     }
     
-//    class MainVC: UIViewController {
-//        let homeView = HomeView()
-//
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            view.backgroundColor = .white
-//            configureHomeView()
-//        }
-//
-//        func configureHomeView() {
-//            view.addSubview(homeView)
-//
-//            homeView.snp.makeConstraints { make in
-//                make.top.bottom.leading.trailing.equalToSuperview()
-//            }
-//        }
-//
-//    }
     func setTabBar() {
         let mainTabBarItem = UITabBarItem(title: "메인", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         let cocktailTabBarItem = UITabBarItem(title: "칵테일", image: UIImage(systemName: "multiply"), selectedImage: UIImage(systemName: "house.fill"))

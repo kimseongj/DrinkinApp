@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 class CocktailInformationView: UIView {
+    
     let cocktailNameTitle: UILabel = {
         let cocktailName = "COCKTAIL_NAME"
         let title = UILabel()

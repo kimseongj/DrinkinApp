@@ -1,12 +1,16 @@
 import UIKit
 import SnapKit
 
-protocol PushToModal: AnyObject {
-    func pushToModal()
+protocol ProductDetailViewDelegate: AnyObject {
+    func pushToolModalVC()
+    func pushBuildModalVC()
+    func pushGlassModalVC()
 }
 
 class ProductDetailViewController: UIViewController {
 
+    var delegate: ProductDetailViewDelegate?
+    
     let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceVertical = true

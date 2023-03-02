@@ -37,7 +37,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    override var isSelected: Bool{
+    override var isSelected: Bool {
         didSet {
             if isSelected {
                 

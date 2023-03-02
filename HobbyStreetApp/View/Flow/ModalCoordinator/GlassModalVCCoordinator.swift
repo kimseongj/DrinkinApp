@@ -1,13 +1,14 @@
 //
-//  ModalVCCoordinator.swift
+//  GlassModalVCCoordinator.swift
 //  HobbyStreetApp
 //
-//  Created by kimseongjun on 2023/02/13.
+//  Created by kimseongjun on 2023/03/02.
 //
 
 import UIKit
 
-class ModalVCCoordinator: Coordinator {
+class GlassModalVCCoordinator {
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
 
@@ -16,9 +17,7 @@ class ModalVCCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ModalViewController()
+        let vc = ToolModalViewController()
         navigationController.present(vc, animated: true)
     }
-    
-    
 }
