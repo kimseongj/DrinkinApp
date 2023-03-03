@@ -22,11 +22,16 @@ struct ProductDetail: Codable {
 }
 
 struct Category: Codable {
+    var id: Int
+    var categoryNameKorean: String
+    var hold: Bool
     
 }
 
 struct Ingredient: Codable {
-    
+    var id: Int
+    var ingredientNameKorean: String
+    var hold: Bool
 }
 
 struct ToolList: Codable {

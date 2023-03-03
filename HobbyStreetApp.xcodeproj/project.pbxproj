@@ -26,6 +26,9 @@
 		1C54761529A369820034C1D5 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C54761429A369820034C1D5 /* ProductDetail.swift */; };
 		1C590A1629702CA1007DD650 /* LoggedInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C590A1529702CA1007DD650 /* LoggedInCell.swift */; };
 		1C5B1C9A299387060018B7BB /* PreferCocktailSelectionVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B1C99299387060018B7BB /* PreferCocktailSelectionVCCoordinator.swift */; };
+		1C5BC11329B25128001D72BF /* ToolModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BC11229B25128001D72BF /* ToolModal.swift */; };
+		1C5BC11529B2519D001D72BF /* IngredientModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BC11429B2519D001D72BF /* IngredientModal.swift */; };
+		1C5BC11729B251FB001D72BF /* SkillModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BC11629B251FB001D72BF /* SkillModal.swift */; };
 		1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609BB296AD6260026CF9E /* PreferCocktail.swift */; };
 		1C77121B29971CAB007A38C7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77121A29971CAB007A38C7 /* File.swift */; };
 		1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */; };
@@ -78,6 +81,9 @@
 		1C54761429A369820034C1D5 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		1C590A1529702CA1007DD650 /* LoggedInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInCell.swift; sourceTree = "<group>"; };
 		1C5B1C99299387060018B7BB /* PreferCocktailSelectionVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionVCCoordinator.swift; sourceTree = "<group>"; };
+		1C5BC11229B25128001D72BF /* ToolModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolModal.swift; sourceTree = "<group>"; };
+		1C5BC11429B2519D001D72BF /* IngredientModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModal.swift; sourceTree = "<group>"; };
+		1C5BC11629B251FB001D72BF /* SkillModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModal.swift; sourceTree = "<group>"; };
 		1C6609BB296AD6260026CF9E /* PreferCocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktail.swift; sourceTree = "<group>"; };
 		1C77121A29971CAB007A38C7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1C8CCFB929630CAD00AF59C4 /* HobbyStreetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyStreetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +222,9 @@
 				1C54761029A367C70034C1D5 /* Login.swift */,
 				1C54761229A3680E0034C1D5 /* Main.swift */,
 				1C54761429A369820034C1D5 /* ProductDetail.swift */,
+				1C5BC11229B25128001D72BF /* ToolModal.swift */,
+				1C5BC11429B2519D001D72BF /* IngredientModal.swift */,
+				1C5BC11629B251FB001D72BF /* SkillModal.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -565,9 +574,12 @@
 				1C021C8C298E463500BA0B19 /* AppCoordinator.swift in Sources */,
 				1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */,
 				1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */,
+				1C5BC11729B251FB001D72BF /* SkillModal.swift in Sources */,
+				1C5BC11329B25128001D72BF /* ToolModal.swift in Sources */,
 				1C547607299A69240034C1D5 /* ToolModalVCCoordinator.swift in Sources */,
 				1C5475F92997B7C90034C1D5 /* PreferBaseView.swift in Sources */,
 				1C5475FC29988C6D0034C1D5 /* BaseCell.swift in Sources */,
+				1C5BC11529B2519D001D72BF /* IngredientModal.swift in Sources */,
 				1CCA334E29AF64DF004D336C /* GlassModalViewController.swift in Sources */,
 				1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */,
 				1C021C8A298E45FF00BA0B19 /* Coordinator.swift in Sources */,

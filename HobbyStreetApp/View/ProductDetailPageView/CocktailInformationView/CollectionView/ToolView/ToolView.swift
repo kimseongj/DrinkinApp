@@ -46,7 +46,6 @@ class ToolView: UIView {
         toolLabelView.addSubview(toolLabel)
         self.addSubview(toolCollectionView)
         
-        
         toolLabelView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().offset(24)
@@ -64,7 +63,6 @@ class ToolView: UIView {
             make.top.equalToSuperview().offset(24)
             make.leading.equalTo(toolLabelView.snp.trailing)
         }
-        
     }
     
     func setToolCollectionViewCell() {
@@ -72,7 +70,6 @@ class ToolView: UIView {
         toolCollectionView.delegate = self
         toolCollectionView.dataSource = self
     }
-    
 }
 
 extension ToolView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {

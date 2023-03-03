@@ -5,7 +5,7 @@
 //  Created by kimseongjun on 2023/01/08.
 //
 
-import UIKit
+import Foundation
 
 struct cocktails: Codable {
     var cocktailName: String

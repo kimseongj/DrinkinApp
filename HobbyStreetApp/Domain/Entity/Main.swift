@@ -21,7 +21,7 @@ struct Results: Codable {
     var description: String
     var categoryList: [CategoryList]
     var ingredientList: [IngredientList]
-    var garnishListL: [String]
+    var garnishList: [String]
 }
 
 struct CategoryList: Codable {
@@ -33,3 +33,5 @@ struct IngredientList: Codable {
     var ingredientNameKorean: String
     var hold: Bool
 }
+
+
