@@ -16,14 +16,11 @@ class BuildModalViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        
         return label
     }()
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        
-        
         return label
     }()
     
