@@ -48,8 +48,7 @@
 		1C8CCFF229630FC300AF59C4 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF129630FC300AF59C4 /* SkillView.swift */; };
 		1C8CCFF429630FD500AF59C4 /* SkillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */; };
 		1C8CCFF629630FE100AF59C4 /* SkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */; };
-		1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFC2964043000AF59C4 /* MainContentView.swift */; };
-		1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */; };
+		1C8CCFFD2964043000AF59C4 /* TipAndContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFFC2964043000AF59C4 /* TipAndContentsView.swift */; };
 		1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC34BFE29752665003BC3B7 /* LoginView.swift */; };
 		1CCA334C29AF64CA004D336C /* BuildModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA334B29AF64CA004D336C /* BuildModalViewController.swift */; };
 		1CCA334E29AF64DF004D336C /* GlassModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA334D29AF64DF004D336C /* GlassModalViewController.swift */; };
@@ -105,8 +104,7 @@
 		1C8CCFF129630FC300AF59C4 /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
 		1C8CCFF329630FD500AF59C4 /* SkillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionView.swift; sourceTree = "<group>"; };
 		1C8CCFF529630FE100AF59C4 /* SkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCollectionViewCell.swift; sourceTree = "<group>"; };
-		1C8CCFFC2964043000AF59C4 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
-		1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeView.swift; sourceTree = "<group>"; };
+		1C8CCFFC2964043000AF59C4 /* TipAndContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipAndContentsView.swift; sourceTree = "<group>"; };
 		1CC34BFE29752665003BC3B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1CCA334B29AF64CA004D336C /* BuildModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildModalViewController.swift; sourceTree = "<group>"; };
 		1CCA334D29AF64DF004D336C /* GlassModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassModalViewController.swift; sourceTree = "<group>"; };
@@ -370,8 +368,7 @@
 			children = (
 				1C8CCFD729630E6400AF59C4 /* CocktailInformationView */,
 				1CCA335529B0F308004D336C /* IntroductionView.swift */,
-				1C8CCFFE2964044400AF59C4 /* ReceipeView.swift */,
-				1C8CCFFC2964043000AF59C4 /* MainContentView.swift */,
+				1C8CCFFC2964043000AF59C4 /* TipAndContentsView.swift */,
 				1C8CCFC029630CAD00AF59C4 /* ProductDetailViewController.swift */,
 			);
 			path = ProductDetailPageView;
@@ -592,7 +589,6 @@
 				1C8CCFE229630EF300AF59C4 /* ToolCollectionView.swift in Sources */,
 				1C590A1629702CA1007DD650 /* LoggedInCell.swift in Sources */,
 				1CCA335229B0C137004D336C /* SkillModalVCCoordinator.swift in Sources */,
-				1C8CCFFF2964044400AF59C4 /* ReceipeView.swift in Sources */,
 				1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */,
 				1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */,
 				1CD9C3C0299264EF007F277B /* HomeBarViewController.swift in Sources */,
@@ -604,7 +600,7 @@
 				1C8CCFD629630E5A00AF59C4 /* MainViewController.swift in Sources */,
 				1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */,
 				1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */,
-				1C8CCFFD2964043000AF59C4 /* MainContentView.swift in Sources */,
+				1C8CCFFD2964043000AF59C4 /* TipAndContentsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

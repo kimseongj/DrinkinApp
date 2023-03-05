@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class MainContentView: UIView {
+class TipAndContentsView: UIView {
    
     let imageView: UIImageView = {
         let imageView = UIImageView()

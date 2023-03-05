@@ -24,9 +24,9 @@ class ProductDetailViewController: UIViewController {
         return stackView
     }()
     
-    let mainContentView = MainContentView()
+    let tipAndContentsView = TipAndContentsView()
+    let introductionView = IntroductionView()
     let cocktailInformationView = CocktailInformationView()
-    let receipeView = ReceipeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +49,10 @@ class ProductDetailViewController: UIViewController {
             make.top.bottom.leading.trailing.equalToSuperview()
             make.width.equalToSuperview()
         }
-        stackView.addArrangedSubview(mainContentView)
+        stackView.addArrangedSubview(introductionView)
         stackView.addArrangedSubview(cocktailInformationView)
-        stackView.addArrangedSubview(receipeView)
-        //stackView.addArrangedSubview(commentView)
+        stackView.addArrangedSubview(tipAndContentsView)
+        
     }
     
 }

@@ -4,11 +4,10 @@ import SnapKit
 class CocktailInformationView: UIView {
     
     let cocktailNameTitle: UILabel = {
-        let cocktailName = "COCKTAIL_NAME"
         let title = UILabel()
         title.textColor = .black
         title.font = UIFont.boldSystemFont(ofSize: 17)
-        title.text = "한 눈에 보는 \(cocktailName)"
+        title.text = "정보"
         return title
     }()
     
