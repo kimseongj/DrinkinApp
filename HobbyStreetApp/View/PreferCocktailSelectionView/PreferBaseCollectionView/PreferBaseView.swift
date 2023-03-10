@@ -64,7 +64,6 @@ extension PreferBaseView: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = preferBaseCollectionView.dequeueReusableCell(withReuseIdentifier: BaseCell.id, for: indexPath) as! BaseCell
         cell.baseNameLabel.text = data[indexPath.row]
         cell.layoutIfNeeded()
-        print("yesyes")
         return cell
     }
     
@@ -82,6 +81,10 @@ extension PreferBaseView: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             15
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
 
 

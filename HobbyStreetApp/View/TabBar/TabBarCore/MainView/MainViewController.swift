@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     //MARK:- UnNLoggedinUI
     lazy var unLoggedInView = UIView()
     
-    lazy var logoImage: UIImageView = {
+    lazy var logoImage1: UIImageView = {
         let logoImage = UIImageView()
         logoImage.image = UIImage(named: "drinkinLogo")
         return logoImage
@@ -56,6 +56,12 @@ class MainViewController: UIViewController {
     //MARK:- LoggedinView
     lazy var loggedInView = UIView()
     
+    lazy var logoImage2: UIImageView = {
+        let logoImage = UIImageView()
+        logoImage.image = UIImage(named: "drinkinLogo")
+        return logoImage
+    }()
+    
     private var recommendCocktailCollectionView: UICollectionView = { // 일단 컬렉션 뷰까지는 만들어지는거 확인했다잉
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -69,7 +75,8 @@ class MainViewController: UIViewController {
         view.backgroundColor = .clear
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        
         return view
     }()
     
@@ -98,7 +105,7 @@ class MainViewController: UIViewController {
         let safeArea = view.safeAreaLayoutGuide
         
         view.addSubview(unLoggedInView)
-        unLoggedInView.addSubview(logoImage)
+        unLoggedInView.addSubview(logoImage1)
         unLoggedInView.addSubview(skeletonView)
         skeletonView.addSubview(recommendLabel1)
         skeletonView.addSubview(recommendLabel2)
@@ -109,7 +116,7 @@ class MainViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-AppCoordinator.tabBarHeight)
         }
         
-        logoImage.snp.makeConstraints { make in
+        logoImage1.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(safeArea)
             make.height.equalTo(30)
@@ -144,15 +151,27 @@ class MainViewController: UIViewController {
     
     //MARK:- LoginUI
     func configureLoggedinUI() {
+        let safeArea = view.safeAreaLayoutGuide
+        
         view.addSubview(loggedInView)
+        loggedInView.addSubview(logoImage2)
         loggedInView.addSubview(recommendCocktailCollectionView)
         
         loggedInView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview().offset(-AppCoordinator.tabBarHeight)
         }
+        
+        logoImage2.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(safeArea)
+            make.height.equalTo(30)
+            make.width.equalTo(100)
+        }
+        
         recommendCocktailCollectionView.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().offset(20)
+            make.top.equalTo(logoImage2.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
             make.trailing.bottom.equalToSuperview().offset(-20)
         }
     }

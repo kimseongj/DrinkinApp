@@ -12,6 +12,12 @@
 		1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */; };
 		1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */; };
 		1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */; };
+		1C2C4F4029B8BE120010D167 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F3F29B8BE120010D167 /* LoginRepository.swift */; };
+		1C2C4F4229B8C5EF0010D167 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F4129B8C5EF0010D167 /* MainRepository.swift */; };
+		1C2C4F4429B8C5F90010D167 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F4329B8C5F90010D167 /* ProductRepository.swift */; };
+		1C2C4F4629B8C60E0010D167 /* ToolModalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F4529B8C60E0010D167 /* ToolModalRepository.swift */; };
+		1C2C4F4829B8CDBF0010D167 /* IngredientModalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F4729B8CDBF0010D167 /* IngredientModalRepository.swift */; };
+		1C2C4F4A29B8CDF20010D167 /* SkillModalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C4F4929B8CDF20010D167 /* SkillModalRepository.swift */; };
 		1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift */; };
 		1C5475F529979CB10034C1D5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5475F429979CB10034C1D5 /* TabBarController.swift */; };
 		1C5475F92997B7C90034C1D5 /* PreferBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5475F82997B7C90034C1D5 /* PreferBaseView.swift */; };
@@ -30,7 +36,7 @@
 		1C5BC11529B2519D001D72BF /* IngredientModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BC11429B2519D001D72BF /* IngredientModal.swift */; };
 		1C5BC11729B251FB001D72BF /* SkillModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BC11629B251FB001D72BF /* SkillModal.swift */; };
 		1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6609BB296AD6260026CF9E /* PreferCocktail.swift */; };
-		1C77121B29971CAB007A38C7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77121A29971CAB007A38C7 /* File.swift */; };
+		1C77121B29971CAB007A38C7 /* PreferCocktailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77121A29971CAB007A38C7 /* PreferCocktailRepository.swift */; };
 		1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */; };
 		1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */; };
 		1C8CCFC129630CAD00AF59C4 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CCFC029630CAD00AF59C4 /* ProductDetailViewController.swift */; };
@@ -66,6 +72,12 @@
 		1C021C8D299153E100BA0B19 /* MainVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCCoordinator.swift; sourceTree = "<group>"; };
 		1C021C8F2991575600BA0B19 /* CocktailVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailVCCoordinator.swift; sourceTree = "<group>"; };
 		1C021C912991577500BA0B19 /* HomeBarVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarVCCoordinator.swift; sourceTree = "<group>"; };
+		1C2C4F3F29B8BE120010D167 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		1C2C4F4129B8C5EF0010D167 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		1C2C4F4329B8C5F90010D167 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		1C2C4F4529B8C60E0010D167 /* ToolModalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolModalRepository.swift; sourceTree = "<group>"; };
+		1C2C4F4729B8CDBF0010D167 /* IngredientModalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModalRepository.swift; sourceTree = "<group>"; };
+		1C2C4F4929B8CDF20010D167 /* SkillModalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModalRepository.swift; sourceTree = "<group>"; };
 		1C347DCF2984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailSelectionViewController.swift; sourceTree = "<group>"; };
 		1C5475F429979CB10034C1D5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1C5475F82997B7C90034C1D5 /* PreferBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferBaseView.swift; sourceTree = "<group>"; };
@@ -84,7 +96,7 @@
 		1C5BC11429B2519D001D72BF /* IngredientModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModal.swift; sourceTree = "<group>"; };
 		1C5BC11629B251FB001D72BF /* SkillModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModal.swift; sourceTree = "<group>"; };
 		1C6609BB296AD6260026CF9E /* PreferCocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktail.swift; sourceTree = "<group>"; };
-		1C77121A29971CAB007A38C7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1C77121A29971CAB007A38C7 /* PreferCocktailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferCocktailRepository.swift; sourceTree = "<group>"; };
 		1C8CCFB929630CAD00AF59C4 /* HobbyStreetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyStreetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8CCFBC29630CAD00AF59C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8CCFBE29630CAD00AF59C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,7 +257,13 @@
 		1C77121929971C9D007A38C7 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				1C77121A29971CAB007A38C7 /* File.swift */,
+				1C77121A29971CAB007A38C7 /* PreferCocktailRepository.swift */,
+				1C2C4F3F29B8BE120010D167 /* LoginRepository.swift */,
+				1C2C4F4129B8C5EF0010D167 /* MainRepository.swift */,
+				1C2C4F4329B8C5F90010D167 /* ProductRepository.swift */,
+				1C2C4F4529B8C60E0010D167 /* ToolModalRepository.swift */,
+				1C2C4F4729B8CDBF0010D167 /* IngredientModalRepository.swift */,
+				1C2C4F4929B8CDF20010D167 /* SkillModalRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -566,10 +584,12 @@
 				1C5475FF299A09E80034C1D5 /* PreferBaseCollectionView.swift in Sources */,
 				1C347DD02984F1C40054DFE7 /* PreferCocktailSelectionViewController.swift in Sources */,
 				1CCA335429B0C17D004D336C /* GlassModalVCCoordinator.swift in Sources */,
+				1C2C4F4629B8C60E0010D167 /* ToolModalRepository.swift in Sources */,
 				1C8CCFE829630F4100AF59C4 /* GlassCollectionView.swift in Sources */,
 				1C8CCFE629630F3200AF59C4 /* GlassView.swift in Sources */,
 				1C021C8C298E463500BA0B19 /* AppCoordinator.swift in Sources */,
 				1C8CCFBD29630CAD00AF59C4 /* AppDelegate.swift in Sources */,
+				1C2C4F4829B8CDBF0010D167 /* IngredientModalRepository.swift in Sources */,
 				1C8CCFDE29630EBE00AF59C4 /* CocktailInformationView.swift in Sources */,
 				1C5BC11729B251FB001D72BF /* SkillModal.swift in Sources */,
 				1C5BC11329B25128001D72BF /* ToolModal.swift in Sources */,
@@ -584,19 +604,23 @@
 				1C5475F529979CB10034C1D5 /* TabBarController.swift in Sources */,
 				1CCA334C29AF64CA004D336C /* BuildModalViewController.swift in Sources */,
 				1C021C922991577500BA0B19 /* HomeBarVCCoordinator.swift in Sources */,
+				1C2C4F4029B8BE120010D167 /* LoginRepository.swift in Sources */,
 				1C5B1C9A299387060018B7BB /* PreferCocktailSelectionVCCoordinator.swift in Sources */,
 				1C547602299A55150034C1D5 /* CocktailCollectionView.swift in Sources */,
 				1C8CCFE229630EF300AF59C4 /* ToolCollectionView.swift in Sources */,
 				1C590A1629702CA1007DD650 /* LoggedInCell.swift in Sources */,
 				1CCA335229B0C137004D336C /* SkillModalVCCoordinator.swift in Sources */,
 				1C6609BC296AD6260026CF9E /* PreferCocktail.swift in Sources */,
+				1C2C4F4429B8C5F90010D167 /* ProductRepository.swift in Sources */,
 				1CC34BFF29752665003BC3B7 /* LoginView.swift in Sources */,
 				1CD9C3C0299264EF007F277B /* HomeBarViewController.swift in Sources */,
+				1C2C4F4A29B8CDF20010D167 /* SkillModalRepository.swift in Sources */,
+				1C2C4F4229B8C5EF0010D167 /* MainRepository.swift in Sources */,
 				1C8CCFE429630F0900AF59C4 /* ToolView.swift in Sources */,
 				1C8CCFEA29630F4F00AF59C4 /* GlassCollectionViewCell.swift in Sources */,
 				1C021C8E299153E100BA0B19 /* MainVCCoordinator.swift in Sources */,
 				1C547605299A62890034C1D5 /* ToolModalViewcontroller.swift in Sources */,
-				1C77121B29971CAB007A38C7 /* File.swift in Sources */,
+				1C77121B29971CAB007A38C7 /* PreferCocktailRepository.swift in Sources */,
 				1C8CCFD629630E5A00AF59C4 /* MainViewController.swift in Sources */,
 				1C021C902991575600BA0B19 /* CocktailVCCoordinator.swift in Sources */,
 				1C8CCFBF29630CAD00AF59C4 /* SceneDelegate.swift in Sources */,

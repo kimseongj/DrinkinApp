@@ -18,6 +18,7 @@ class GlassModalViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "스푼"
+        label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
     }()
     
@@ -28,9 +29,17 @@ class GlassModalViewController: UIViewController {
         return label
     }()
     
+    private let informationLabel: UILabel = {
+        let label = UILabel()
+        label.text = "정보"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
+        configureUI()
     }
     
     private func configureUI() {
@@ -46,6 +55,12 @@ class GlassModalViewController: UIViewController {
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
+        }
+        
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
     }
 }

@@ -51,8 +51,7 @@ class ProductDetailViewController: UIViewController {
         }
         stackView.addArrangedSubview(introductionView)
         stackView.addArrangedSubview(cocktailInformationView)
-        stackView.addArrangedSubview(tipAndContentsView)
-        
+
     }
     
 }
