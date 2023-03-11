@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import AlignedCollectionViewFlowLayout
-    // present방식으로 구현해야될거 같다.
+    
 class PreferCocktailSelectionViewController: UIViewController {
     
     //MARK:- mainLabel
@@ -59,6 +58,7 @@ class PreferCocktailSelectionViewController: UIViewController {
         configureUI()
         view.backgroundColor = .white
         MainViewController.login = true
+        setCocktailCollectionView()
     }
     
     func configureUI() {
@@ -108,11 +108,34 @@ class PreferCocktailSelectionViewController: UIViewController {
         
     }
     
+    func setCocktailCollectionView() {
+        cocktailCollectionView.delegate = self
+        cocktailCollectionView.dataSource = self
+    }
+    
     @objc func pushExitButton() {
         self.dismiss(animated: true)
     }
     
 }
 
+extension PreferCocktailSelectionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = cocktailCollectionView.dequeueReusableCell(withReuseIdentifier: "CocktailCell", for: indexPath) as! CocktailCollectionViewCell
+        cell.cocktailNameLabel.text = "asd"
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let cellHeight = screenSize.height / 4
+        let cellWidth = (screenSize.width - 70) / 3
 
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+}
 

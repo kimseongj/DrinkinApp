@@ -21,14 +21,13 @@ class CocktailCollectionView: UICollectionView {
     
     private func setCollectionView() {
         flowLayout.scrollDirection = .vertical
-        flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 8
         self.isScrollEnabled = true
         self.showsVerticalScrollIndicator = true
         self.showsHorizontalScrollIndicator = false
         self.contentInset = .zero
         self.clipsToBounds = true
-        self.register(BaseCell.self, forCellWithReuseIdentifier: "CocktailCell")
+        self.register(CocktailCollectionViewCell.self, forCellWithReuseIdentifier: "CocktailCell")
         self.layoutIfNeeded()
     }
 }
@@ -36,17 +35,7 @@ class CocktailCollectionView: UICollectionView {
 class CocktailCollectionViewCell: UICollectionViewCell {
     static let cellID = "CocktailCell"
     
-    private let cocktailStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = .center
-        return stackView
-    }()
-    
-    private let topEmptyView = UIView()
-    private let bottomEmptyView = UIView()
-    
+    //private let contentView = UIView()
     
     private lazy var cocktailImageView: UIImageView = {
        let imageView = UIImageView()
@@ -54,7 +43,7 @@ class CocktailCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var cocktailNameLabel: UILabel = {
+    lazy var cocktailNameLabel: UILabel = {
         let cocktailNameLabel = UILabel()
         cocktailNameLabel.font = UIFont.systemFont(ofSize: 13)
         return cocktailNameLabel
@@ -70,24 +59,21 @@ class CocktailCollectionViewCell: UICollectionViewCell {
     }
     
     private func configureUI() {
-        self.addSubview(cocktailStackView)
-        cocktailStackView.addArrangedSubview(topEmptyView)
-        cocktailStackView.addArrangedSubview(cocktailImageView)
-        cocktailStackView.addArrangedSubview(cocktailNameLabel)
-        cocktailStackView.addArrangedSubview(bottomEmptyView)
+        let screenSize: CGRect = UIScreen.main.bounds
         
-        cocktailStackView.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalToSuperview()
+        self.addSubview(cocktailImageView)
+        self.addSubview(cocktailNameLabel)
+        
+        cocktailImageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
         
-        topEmptyView.snp.makeConstraints { make in
-            make.height.equalTo(10)
-            make.width.equalTo(20)
+        cocktailNameLabel.snp.makeConstraints { make in
+            make.top.equalTo(cocktailImageView.snp.bottom).offset(8)
+            make.centerX.equalToSuperview()
         }
-      
-        bottomEmptyView.snp.makeConstraints { make in
-            make.height.equalTo(16)
-            make.width.equalTo(20)
-        }
+        
+        
     }
 }
